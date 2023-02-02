@@ -26,5 +26,5 @@ app.use('/img', express.static(path.resolve(__dirname, 'assets/img')));
 // router
 app.use('/', require('./server/routes/router'));
 
-
+// mew
 app.listen(3000, () => { console.log(`Server is running on http://localhost:${PORT}`)});
