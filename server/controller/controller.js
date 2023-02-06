@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 exports.create = async(req, res) => {
 
     let user = await Userdb.findOne({ email: req.body.email});
-   if (user) return res.status(400).send('User already registered');
+   if (user) return res.status(400).send({message: 'User already registered'});
 
     //creating user and saving in db
 
